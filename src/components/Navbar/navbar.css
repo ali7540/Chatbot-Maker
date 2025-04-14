@@ -1,0 +1,23 @@
+.links{
+    font-size:1.3vw;
+    color:aliceblue;
+    font-family:cursive;
+    text-decoration: none;
+}
+.parent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:25vw;
+    align-items: center;
+
+}
+
+.main{
+    display: flex;
+    justify-content: space-between;
+    padding:5px;
+    background-color: rgb(53, 51, 48);
+    align-items: center;
+
+}

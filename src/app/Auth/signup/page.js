@@ -1,4 +1,5 @@
 "use client"
+import Link from 'next/link';
 import React, { useState } from 'react'
 
 const Signup = () => {
@@ -25,6 +26,8 @@ const Signup = () => {
         <input name='password' type='password' placeholder='password' ></input>
         <button type="submit">Signup</button>
       </form>
+      <p>Already have an Account? <Link href="/Auth/Login">Login</Link> first</p>
+
     </div>
   )
 }

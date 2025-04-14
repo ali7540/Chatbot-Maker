@@ -1,4 +1,5 @@
 "use client"
+import Link from 'next/link';
 import React, { useState } from 'react'
 
 const Signup = () => {
@@ -19,12 +20,13 @@ const Signup = () => {
     }
   return (
     <div>
-      <h1>Signup</h1>
+      <h1>Login Page</h1>
       <form onChange={handleChange} onSubmit={handleSubmit}>
         <input name="email" type='email' placeholder='email' ></input>
         <input name='password' type='password' placeholder='password' ></input>
-        <button type="submit">Signup</button>
+        <button type="submit">Login</button>
       </form>
+      <p>Don&apos;t have an Account? <Link href="/Auth/signup">Signup</Link> first</p>
     </div>
   )
 }
