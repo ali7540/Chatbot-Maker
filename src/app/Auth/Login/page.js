@@ -1,6 +1,7 @@
 "use client"
 import Link from 'next/link';
 import React, { useState } from 'react'
+import { login} from '@/services/auth';
 
 const Signup = () => {
     const [form,setForm]=useState({
@@ -14,10 +15,14 @@ const Signup = () => {
             ...form,[fieldName]:fieldValue,
         })
     }
-    function handleSubmit(e){
-        e.preventDefault()
-        console.log(form)
-    }
+    async function handleSubmit(e){
+        try{e.preventDefault()
+        const response = await login(form);
+        console.log(response)}
+        catch(err){
+          console.log(err)
+        }
+    };
   return (
     <div>
       <h1>Login Page</h1>

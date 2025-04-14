@@ -7,8 +7,8 @@ const Dashboard = () => {
     const globalData=useContext(AuthContext)
     const isLoggedin=globalData.isLoggedin
 
-    if(!isLoggedin){
-        return <>Please Login First</>
+  if(!isLoggedin){
+      return <>Please Login First</>
     }
   return (
     <div>
